@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA MAJO</title>
+    <link rel="stylesheet" href="css/style.css" id="light-mode-style">
+
+
+    <link rel="stylesheet" href="css/style-dark.css" id="dark-mode-style">
+
+</head>
+<body>
+
+    <section id="cont-general">
+        <div id="cont-calculadora">
+            <div id="cont-escritura">
+                <input type="text" id="display" readonly>
+            </div>
+            <div id="cont-botones">
+                <!-- FILA 1 -->
+                <button id="ac" class="btn" onclick="limpiar()">AC</button>
+                <button id="borrar" class="btn" onclick="cambiarSigno()">±</button>
+                <button id="porcentaje" class="btn" onclick="agregarPorcentaje()">%</button>
+                <button id="dividir" class="btn" onclick="agregarOperador('/')">÷</button>
+                <!-- FILA 2 --> 
+                <button id="siete" class="btn" onclick="agregarDigito(7)">7</button>
+                <button id="ocho" class="btn" onclick="agregarDigito(8)">8</button>
+                <button id="nueve" class="btn" onclick="agregarDigito(9)">9</button>
+                <button id="multiplicar" class="btn" onclick="agregarOperador('*')">x</button>
+                <!-- FILA 3 -->
+                <button id="cuatro" class="btn" onclick="agregarDigito(4)">4</button>
+                <button id="cinco" class="btn" onclick="agregarDigito(5)">5</button>
+                <button id="seis" class="btn" onclick="agregarDigito(6)">6</button>
+                <button id="restar" class="btn" onclick="agregarOperador('-')">-</button>
+                <!-- FILA 4 -->
+                <button id="uno" class="btn" onclick="agregarDigito(1)">1</button>
+                <button id="dos" class="btn" onclick="agregarDigito(2)">2</button>
+                <button id="tres" class="btn" onclick="agregarDigito(3)">3</button>
+                <button id="sumar" class="btn" onclick="agregarOperador('+')">+</button>
+                <!-- FILA 5 -->
+                <button id="cero" class="btn doble" onclick="agregarDigito(0)">0</button>
+                <button id="punto" class="btn" onclick="agregarPunto()">.</button>
+                <button id="igual" class="btn" onclick="calcular()">=</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="dark-mode">
+        <label class="ui-switch">
+            <input type="checkbox" id="dark-mode-toggle"> <!-- Agregamos un ID para identificar este input -->
+            <div class="slider">
+                <div class="circle"></div>
+            </div>
+        </label>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
